@@ -6,21 +6,12 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BodyComponent } from './components/body/body.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MovieComponent } from './components/movie/movie.component'
+import { MovieComponent } from './components/movie/movie.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    BodyComponent,
-    MovieComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  declarations: [AppComponent, NavbarComponent, BodyComponent, MovieComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

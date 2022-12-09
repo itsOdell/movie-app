@@ -145,11 +145,23 @@
               "devServerTarget": "movie-app:serve:production"
             }
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "dfb3660e-3503-4007-9978-2994f923d5c3"
+    "analytics": "dfb3660e-3503-4007-9978-2994f923d5c3",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

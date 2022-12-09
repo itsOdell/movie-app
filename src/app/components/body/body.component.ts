@@ -4,20 +4,14 @@ import { IPopularMovie } from 'src/app/services/movies/types';
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
-  styleUrls: ['./body.component.scss']
+  styleUrls: ['./body.component.scss'],
 })
 export class BodyComponent implements OnInit {
-
   public popularMovies: IPopularMovie[] = [];
 
-  constructor(private movies: MoviesService) { 
-  }
+  constructor(private movies: MoviesService) {}
 
   ngOnInit(): void {
-    this.movies.popularMovies()
-      .subscribe(data => console.log(data))
+    this.movies.popularMovies().subscribe((data) => console.log(data));
   }
-
-
-
 }
