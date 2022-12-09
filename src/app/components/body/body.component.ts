@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MoviesService } from 'src/app/services/movies.service';
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
-  constructor() { }
+  public discoverMovies = [];
+
+  constructor(private movies: MoviesService) { }
 
   ngOnInit(): void {
   }
+
+
 
 }
