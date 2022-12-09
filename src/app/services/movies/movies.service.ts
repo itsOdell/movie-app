@@ -5,10 +5,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MoviesService {
-
+  url: string = "url"
   constructor(private http: HttpClient) { }
 
-  getMovies() {
-    let response = this.http.get
+  get discoverMovies() {
+    let response = this.http.get(this.url);
+    return response;
   }
 }
