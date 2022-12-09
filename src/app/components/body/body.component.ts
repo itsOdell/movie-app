@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies/movies.service';
+import { IPopularMovie } from 'src/app/services/movies/types';
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
@@ -7,11 +8,14 @@ import { MoviesService } from 'src/app/services/movies/movies.service';
 })
 export class BodyComponent implements OnInit {
 
-  public discoverMovies = [];
+  public popularMovies: IPopularMovie[] = [];
 
-  constructor(private movies: MoviesService) { }
+  constructor(private movies: MoviesService) { 
+  }
 
   ngOnInit(): void {
+    this.movies.popularMovies()
+      .subscribe(data => console.log(data))
   }
 
 

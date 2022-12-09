@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { IPopularMovie } from './types';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesService {
-  url: string = "url"
+  baseUrl: string = "https://jsonplaceholder.typicode.com/posts/"
   constructor(private http: HttpClient) { }
 
-  get discoverMovies() {
-    let response = this.http.get(this.url);
+  popularMovies(): Observable<IPopularMovie[]> {
+    let response = this.http.get<IPopularMovie[]>(this.baseUrl);
     return response;
   }
 }
