@@ -7,9 +7,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BodyComponent } from './components/body/body.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieComponent } from './components/movie/movie.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, BodyComponent, MovieComponent],
+  declarations: [AppComponent, NavbarComponent, BodyComponent, MovieComponent, SliderComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
