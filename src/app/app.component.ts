@@ -9,11 +9,12 @@ import { IPopularMovie } from './services/movies/types';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private movies: MoviesService) {
-  }
+  constructor(private movies: MoviesService) {}
   title = 'movie-app';
   public popularMovies!: IPopularMovie[];
   ngOnInit(): void {
-   this.movies.popularMovies().subscribe((data) => this.popularMovies = data);
+    this.movies
+      .popularMovies()
+      .subscribe((data) => (this.popularMovies = data));
   }
 }

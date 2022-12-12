@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  tmbd_apikey: "spmetjong"
+  tmbd_apikey: 'spmetjong',
 };
 
 /*

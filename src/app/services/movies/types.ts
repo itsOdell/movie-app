@@ -1,4 +1,4 @@
-interface IResults {
+export interface IResults {
   poster_path: string | null;
   adult: boolean;
   overvie: string;

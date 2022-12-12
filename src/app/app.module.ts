@@ -10,7 +10,13 @@ import { MovieComponent } from './components/movie/movie.component';
 import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, BodyComponent, MovieComponent, SliderComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    BodyComponent,
+    MovieComponent,
+    SliderComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

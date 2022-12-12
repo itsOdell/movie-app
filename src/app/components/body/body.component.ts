@@ -12,6 +12,8 @@ export class BodyComponent implements OnInit {
   constructor(private movies: MoviesService) {}
 
   ngOnInit(): void {
-    this.movies.popularMovies().subscribe((movies: IPopularMovie[]) => this.popularMovies = movies);
+    this.movies
+      .popularMovies()
+      .subscribe((movies: IPopularMovie[]) => (this.popularMovies = movies));
   }
 }
