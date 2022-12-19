@@ -4,8 +4,11 @@ main {
   // background: linear-gradient(85deg, black 35%, var(--transparent-dark-bg));
   background: linear-gradient(90deg, black 35%, transparent);
   .overlay {
-    width: 100%;
+    max-width: 87%;
     height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
   .info  {
     color: white;
