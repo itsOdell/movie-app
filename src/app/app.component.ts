@@ -11,7 +11,7 @@ import { IPopularMovie } from './services/movies/types';
 export class AppComponent implements OnInit {
   constructor(private movies: MoviesService) {}
   title = 'movie-app';
-  public popularMovies!: IPopularMovie[];
+  public popularMovies!: IPopularMovie;
   ngOnInit(): void {
     this.movies
       .popularMovies()
