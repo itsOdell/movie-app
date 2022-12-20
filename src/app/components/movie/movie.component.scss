@@ -9,6 +9,8 @@
     }
     .title {
         padding: 5px 0;
+        white-space: nowrap;
+        overflow-x: hidden;
         h2 {
             font-size: 17px;
             font-weight: 600;
