@@ -8,6 +8,7 @@ import { BodyComponent } from './components/body/body.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieComponent } from './components/movie/movie.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { TruncatePipe } from './pipes/truncate/truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SliderComponent } from './components/slider/slider.component';
     BodyComponent,
     MovieComponent,
     SliderComponent,
+    TruncatePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

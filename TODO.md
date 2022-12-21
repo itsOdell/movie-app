@@ -1,0 +1,7 @@
+- complete the style of the indivudial movie cards
+- remove the scroll bar in the slider component
+- add more sliders
+- add routes
+- complete the body component by fetching all tredning movies and using a carousel that slides automatically
+- style navbar better
+- make a new pipe that turns the last letters to "..." if the length is too long
