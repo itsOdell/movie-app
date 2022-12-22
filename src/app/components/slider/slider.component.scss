@@ -25,11 +25,17 @@
             }
         }
 
+        .movies_container::-webkit-scrollbar {
+            display: none; /* Safari */
+        }
         .movies_container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 35px 0;
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            scrollbar-width: none;  /* Firefox */
+            box-sizing: content-box;
             .arrow {
                 width: 50px;
                 height: 50px;
@@ -38,6 +44,7 @@
                 display: flex;
                 overflow-x: scroll;
                 overflow-y: hidden;
+                padding: 20px 0;
                 app-movie:not(:first-child):not(:last-child) {
                     margin: 0 10px;
                 }
