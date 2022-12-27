@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MoviesService } from 'src/app/services/movies/movies.service';
-import { IPopularMovie } from 'src/app/services/movies/types';
+import { IMovie } from 'src/app/services/movies/types';
 
 @Component({
   selector: 'app-slider',
@@ -10,7 +10,7 @@ import { IPopularMovie } from 'src/app/services/movies/types';
 })
 export class SliderComponent implements OnInit {
   @Input()
-  public genre!: IPopularMovie;
+  public genre!: IMovie;
   constructor() {}
 
   ngOnInit(): void {}

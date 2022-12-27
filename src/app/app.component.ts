@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MoviesService } from './services/movies/movies.service';
-import { IPopularMovie } from './services/movies/types';
+import { IMovie } from './services/movies/types';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +11,10 @@ import { IPopularMovie } from './services/movies/types';
 export class AppComponent implements OnInit {
   constructor(private movies: MoviesService) {}
   title = 'movie-app';
-  public popularMovies!: IPopularMovie;
+  public popularMovies!: IMovie;
   ngOnInit(): void {
     this.movies
-      .popularMovies()
+      .getMovies('popular')
       .subscribe((data) => (this.popularMovies = data));
   }
 }

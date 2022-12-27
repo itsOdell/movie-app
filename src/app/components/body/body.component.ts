@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies/movies.service';
-import { IPopularMovie } from 'src/app/services/movies/types';
+import { IMovie } from 'src/app/services/movies/types';
+import SwiperCore from 'swiper';
+
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
   styleUrls: ['./body.component.scss'],
 })
 export class BodyComponent implements OnInit {
-  public popularMovies!: IPopularMovie;
+  public popularMovies!: IMovie;
   public testData: {
     title: string;
     rating: number;
@@ -25,7 +27,7 @@ export class BodyComponent implements OnInit {
   constructor(private movies: MoviesService) {}
 
   ngOnInit(): void {
-    this.movies.popularMovies().subscribe((movies: IPopularMovie) => {
+    this.movies.getMovies('popular').subscribe((movies: IMovie) => {
       this.popularMovies = movies;
       console.log(this.popularMovies);
     });

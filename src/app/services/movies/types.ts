@@ -15,7 +15,7 @@ export interface IResults {
   video_average: number;
 }
 
-export interface IPopularMovie {
+export interface IMovie {
   page: number;
   results: IResults[];
   total_results: number;
