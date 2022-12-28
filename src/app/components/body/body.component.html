@@ -1,27 +1,30 @@
-<!-- <main>
-  <div class="overlay">
-    <div class="info">
-      <h1 class="title">{{ testData.title }}</h1>
-      <div class="stats">
-        <h3 class="rating">{{ testData.rating }}<span>/10</span></h3>
-        <h3 class="reviews">{{ testData.reviews }} reviews</h3>
-        <h3 class="release">{{ testData.release }}</h3>
-      </div>
-      <p class="description">{{ testData.description }}</p>
-    </div>
-  </div>
-</main> -->
-
 <main>
-  <div class="overlay">
-    <div class="info">
-      <h1 class="title">{{ testData.title }}</h1>
-      <div class="stats">
-        <h3 class="rating">{{ testData.rating }}<span>/10</span></h3>
-        <h3 class="reviews">{{ testData.reviews }} reviews</h3>
-        <h3 class="release">{{ testData.release }}</h3>
-      </div>
-      <p class="description">{{ testData.description }}</p>
-    </div>
+  <div class="overlay" [ngStyle]="">
+    <swiper
+      [slidesPerView]="1"
+      [spaceBetween]="10"
+      [navigation]="false"
+      [pagination]="{ clickable: false }"
+      [scrollbar]="{ draggable: true }"
+    >
+      <ng-template
+        swiperSlide
+        *ngFor="let movie of now_playing.results; index as i"
+      >
+        <div class="info">
+          <h1 class="title">{{ movie.title }}</h1>
+          <div class="stats">
+            <h3 class="rating">{{ movie.vote_average }}<span>/10</span></h3>
+            <h3 class="reviews">{{ movie.vote_count }} reviews</h3>
+            <h3 class="release">{{ movie.release_date | date : "yyyy" }}</h3>
+          </div>
+          <p class="description">{{ movie.overview }}</p>
+        </div>
+        <img
+          src="http://image.tmdb.org/t/p/original{{ movie.backdrop_path }}"
+          alt=""
+        />
+      </ng-template>
+    </swiper>
   </div>
 </main>

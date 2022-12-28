@@ -9,7 +9,7 @@ import SwiperCore from 'swiper';
   styleUrls: ['./body.component.scss'],
 })
 export class BodyComponent implements OnInit {
-  public popularMovies!: IMovie;
+  public now_playing!: IMovie;
   public testData: {
     title: string;
     rating: number;
@@ -27,9 +27,9 @@ export class BodyComponent implements OnInit {
   constructor(private movies: MoviesService) {}
 
   ngOnInit(): void {
-    this.movies.getMovies('popular').subscribe((movies: IMovie) => {
-      this.popularMovies = movies;
-      console.log(this.popularMovies);
+    this.movies.getMovies('now_playing').subscribe((movies: IMovie) => {
+      this.now_playing = movies;
+      console.log(this.now_playing);
     });
   }
 }

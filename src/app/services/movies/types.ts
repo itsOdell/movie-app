@@ -1,7 +1,7 @@
 export interface IResults {
   poster_path?: string | null;
   adult?: boolean;
-  overvie?: string;
+  overview?: string;
   release_date?: string;
   genre_ids?: number[];
   id?: number;
@@ -13,6 +13,7 @@ export interface IResults {
   vote_count?: number;
   video?: boolean;
   video_average?: number;
+  vote_average?: number;
   belongs_to_collection?: null;
   budget?: number;
   genres?: IGenre[];
