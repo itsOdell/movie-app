@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { IMovie } from './types';
+import { IMovie, IMovieType } from './types';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -11,7 +11,7 @@ export class MoviesService {
   baseUrl: string = 'https://api.themoviedb.org/3';
   constructor(private http: HttpClient) {}
 
-  getMovies(type: string): Observable<IMovie> {
+  getMovies(type: IMovieType): Observable<IMovie> {
     let response = this.http.get<IMovie>(
       `${this.baseUrl}/movie/${type}?api_key=${environment.TMDB_APIKEY}`
     );
