@@ -31,7 +31,7 @@ interface IDate {
 }
 export interface IMovie {
   page?: number;
-  results?: IResults[];
+  results: IResults[];
   dates?: IDate[];
   total_results?: number;
   total_pages?: number;

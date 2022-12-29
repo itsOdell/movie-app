@@ -6,11 +6,11 @@
       [navigation]="false"
       [pagination]="{ clickable: false }"
       [scrollbar]="{ draggable: true }"
+      (swiper)="onSwiper($event)"
+      (slideChange)="onSlideChange($event)"
+      [autoplay]="true"
     >
-      <ng-template
-        swiperSlide
-        *ngFor="let movie of now_playing.results; index as i"
-      >
+      <ng-template swiperSlide *ngFor="let movie of now_playing.results">
         <div class="info">
           <h1 class="title">{{ movie.title }}</h1>
           <div class="stats">
