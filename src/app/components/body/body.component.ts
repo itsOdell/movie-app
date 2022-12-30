@@ -23,6 +23,7 @@ export class BodyComponent implements OnInit {
   onSlideChange([swiper]: any) {
     this.activeIndex = swiper.activeIndex;
     this.activeImage = this.now_playing.results[this.activeIndex].backdrop_path;
+    console.log(this.activeImage);
   }
 
   ngOnInit(): void {
@@ -30,5 +31,9 @@ export class BodyComponent implements OnInit {
       this.now_playing = movies;
       console.log(this.now_playing);
     });
+    setInterval(() => {
+      this.activeImage =
+        this.now_playing.results[this.activeIndex].backdrop_path;
+    }, 200);
   }
 }

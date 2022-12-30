@@ -3,6 +3,9 @@ main {
   height: 600px;
   // background: linear-gradient(85deg, black 35%, var(--transparent-dark-bg));
   background: linear-gradient(90deg, black 35%, transparent);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   .overlay {
     max-width: 87%;
     height: 100%;

@@ -11,7 +11,12 @@ import { IMovie } from 'src/app/services/movies/types';
 export class SliderComponent implements OnInit {
   @Input()
   public genre!: IMovie;
+  @Input()
+  public name!: string;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setTimeout(() => console.log(this.genre), 3000);
+  }
 }

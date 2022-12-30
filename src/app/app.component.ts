@@ -21,9 +21,13 @@ export class AppComponent implements OnInit {
   constructor(private movies: MoviesService) {}
   title = 'movie-app';
   public popularMovies!: IMovie;
+  public top_rated!: IMovie;
   ngOnInit(): void {
     this.movies
       .getMovies('popular')
       .subscribe((data) => (this.popularMovies = data));
+    this.movies
+      .getMovies('top_rated')
+      .subscribe((data) => (this.top_rated = data));
   }
 }

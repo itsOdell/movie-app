@@ -1,5 +1,10 @@
-<main>
-  <div class="overlay" [ngStyle]="">
+<main
+  [ngStyle]="{
+    'background-image':
+      'url(http://image.tmdb.org/t/p/original' + activeImage + ')'
+  }"
+>
+  <div class="overlay">
     <swiper
       [slidesPerView]="1"
       [spaceBetween]="10"
@@ -8,7 +13,7 @@
       [scrollbar]="{ draggable: true }"
       (swiper)="onSwiper($event)"
       (slideChange)="onSlideChange($event)"
-      [autoplay]="true"
+      [autoplay]="{ delay: 3000, disableOnInteraction: false }"
     >
       <ng-template swiperSlide *ngFor="let movie of now_playing.results">
         <div class="info">
@@ -20,10 +25,6 @@
           </div>
           <p class="description">{{ movie.overview }}</p>
         </div>
-        <img
-          src="http://image.tmdb.org/t/p/original{{ movie.backdrop_path }}"
-          alt=""
-        />
       </ng-template>
     </swiper>
   </div>
