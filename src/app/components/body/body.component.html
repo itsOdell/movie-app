@@ -13,7 +13,7 @@
       [scrollbar]="{ draggable: true }"
       (swiper)="onSwiper($event)"
       (slideChange)="onSlideChange($event)"
-      [autoplay]="{ delay: 3000, disableOnInteraction: false }"
+      [autoplay]="{ delay: 5000, disableOnInteraction: false }"
     >
       <ng-template swiperSlide *ngFor="let movie of now_playing.results">
         <div class="info">
