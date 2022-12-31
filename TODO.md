@@ -7,6 +7,3 @@
 - make a new pipe that turns the last letters to "..." if the length is too long
 
 ---------Bilals TODO List---------
-
-- Finish Release date on movie
-- Finish Ratings on movie
