@@ -1,4 +1,3 @@
-- complete the style of the indivudial movie cards
 - remove the scroll bar in the slider component
 - add more sliders
 - add routes
