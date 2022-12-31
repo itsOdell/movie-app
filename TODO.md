@@ -5,5 +5,3 @@
 - complete the body component by fetching all tredning movies and using a carousel that slides automatically
 - style navbar better
 - make a new pipe that turns the last letters to "..." if the length is too long
-
----------Bilals TODO List---------
